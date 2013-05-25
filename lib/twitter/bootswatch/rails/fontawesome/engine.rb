@@ -11,7 +11,7 @@ module Twitter
             :group => :all do |app|
 
               paths = %W[
-                #{File.join(app.config.root, 'vendor', 'toolkit')}
+                #{File.join(config.root, 'vendor', 'toolkit')}
               ]
 
               paths.each do |p|
