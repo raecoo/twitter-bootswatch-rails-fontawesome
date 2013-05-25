@@ -1,0 +1,19 @@
+// <%= config[:theme_info] %>
+// Bootswatch Font Awesome
+
+// Imports
+// --------------------------
+
+<%= config[:variables_less] %>
+
+// Imports
+// --------------------------
+
+<%
+config[:less_imports].map{|item| item.gsub(/.less/, '')}.each do |less_file|
+unless less_file == 'variables'
+%>@import "font-awesome/<%= less_file %>";
+<%
+end
+end
+%>
