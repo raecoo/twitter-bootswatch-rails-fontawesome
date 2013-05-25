@@ -75,14 +75,30 @@ Example:
 
 Any of the above commands create a [theme_name]/font-awesome.less file for the passed in [theme_name].
 
-If you had an existing admin bootswatch theme here's the contents:
+If you had an existing admin bootswatch theme here's the contents of admin/font-awesome.less:
 
 
-```ruby
-class ApplicationController < ActionController::Base
-  # ...
-  layout 'cyborg'
-end
+```less
+// Bootstrap 3.1.1
+// Bootswatch Font Awesome
+
+// Variables
+// --------------------------
+
+@borderColor:        #eee;
+@iconMuted:          #eee;
+@iconLight:          #fff;
+@iconDark:           #333;
+
+// Imports
+// --------------------------
+
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/bootstrap";
+@import "font-awesome/extras";
+@import "font-awesome/icons";
 ```
 
 ## Changelog
