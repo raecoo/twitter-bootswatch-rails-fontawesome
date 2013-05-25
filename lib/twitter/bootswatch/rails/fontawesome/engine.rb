@@ -7,16 +7,11 @@ module Twitter
         class Engine < ::Rails::Engine
 
           initializer 'twitter-bootswatch-rails-fontawesome.setup',
-            :after => 'twitter-bootswatch-rails.setup',
+            :after => 'less-rails.after.load_config_initializers',
             :group => :all do |app|
 
-              paths = %W[
-                #{File.join(config.root, 'vendor', 'toolkit')}
-              ]
-
-              paths.each do |p|
-                app.config.assets.paths << p
-                app.config.less.paths << p
+              if defined?(Less)
+                app.config.less.paths << File.join(config.root, 'vendor', 'toolkit')
               end
 
             end

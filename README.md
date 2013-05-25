@@ -103,6 +103,6 @@ If you had an existing admin bootswatch theme here's the contents of admin/font-
 
 ## Changelog
 
-  - v3.1.1.0
+  - v3.1.1.2
     * Initial release
     * Updated to use Font Awesome v3.1.1
