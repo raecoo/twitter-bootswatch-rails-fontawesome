@@ -41,7 +41,7 @@ In application.css or [theme_name] css file just do the following:
 /*
  *= require_self
  *= require [theme_name]/loader
- *= require [theme_name or font-awesome]/font-awesome
+ *= require fontawesome
 */
 ```
 
@@ -51,8 +51,8 @@ If you need the ie7 fix:
 /*
  *= require_self
  *= require [theme_name]/loader
- *= require [theme_name or font-awesome]/font-awesome
- *= require font-awesome/font-awesome-ie7
+ *= require fontawesome
+ *= require fontawesome/font-awesome-ie7
 */
 ```
 
@@ -93,16 +93,26 @@ If you had an existing admin bootswatch theme here's the contents of admin/font-
 // Imports
 // --------------------------
 
-@import "font-awesome/mixins";
-@import "font-awesome/path";
-@import "font-awesome/core";
-@import "font-awesome/bootstrap";
-@import "font-awesome/extras";
-@import "font-awesome/icons";
+@import "fontawesome/mixins";
+@import "fontawesome/path";
+@import "fontawesome/core";
+@import "fontawesome/bootstrap";
+@import "fontawesome/extras";
+@import "fontawesome/icons";
+```
+
+Then in the [theme_name] css file just do the following:
+
+```css
+/*
+ *= require_self
+ *= require [theme_name]/loader
+ *= require [theme_name]/font-awesome
+*/
 ```
 
 ## Changelog
 
-  - v3.1.1.2
+  - v3.1.1.3
     * Initial release
     * Updated to use Font Awesome v3.1.1

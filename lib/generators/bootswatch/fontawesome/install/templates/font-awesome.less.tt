@@ -14,7 +14,7 @@
 <%
 config[:less_imports].map{|item| item.gsub(/.less/, '')}.each do |less_file|
 unless less_file == 'variables' -%>
-@import "font-awesome/<%= less_file %>";
+@import "fontawesome/<%= less_file %>";
 <%
 end
 end
