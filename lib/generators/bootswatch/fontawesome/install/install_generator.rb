@@ -22,7 +22,7 @@ module Bootswatch
         end
 
         def theme_info
-          "#{use_default_theme_name? ? 'bootstrap'.capitalize : theme_name.capitalize} #{Twitter::Bootswatch::Rails::VERSION.chop.chop}"
+          "#{use_default_theme_name? ? 'bootstrap'.capitalize : theme_name.capitalize} #{Twitter::Bootswatch::Rails::Fontawesome::VERSION.chop.chop}"
         end
 
         def add_assets
@@ -59,22 +59,18 @@ module Bootswatch
           stylesheets_dest_path = "app/assets/stylesheets/#{theme_name}"
           empty_directory stylesheets_dest_path
 
-          variables_less = File.readlines(find_in_source_paths('variables.less'))
+          less_variables = File.readlines(find_in_source_paths('variables.less'))
 
           # clean up line breaks
-          variables_less.delete_at(0)
-          variables_less.delete_at(0)
-          variables_less.delete_at(0)
-          variables_less.delete_at(0)
-          variables_less.delete_at(0)
+          less_variables.delete_at(0)
+          less_variables.delete_at(0)
+          less_variables.delete_at(0)
+          less_variables.delete_at(0)
+          less_variables.delete_at(0)
 
           less_imports = File.read(find_in_source_paths('font-awesome.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
-          # let's auto backup if a custom loader.css.less already exists
-          if File.exist?(File.join(stylesheets_dest_path,'font-awesome.less'))
-            File.rename(File.join(stylesheets_dest_path,'font-awesome.less'), File.join(stylesheets_dest_path,'font-awesome.less_bak'))
-          end
-          template 'font-awesome.less.tt', File.join(stylesheets_dest_path,'font-awesome.less'), {less_imports: less_imports, variables_less: variables_less, theme_name: theme_name, theme_info: theme_info}
+          template 'font-awesome.less.tt', File.join(stylesheets_dest_path,'font-awesome.less'), {less_imports: less_imports, less_variables: less_variables, theme_name: theme_name, theme_info: theme_info}
 
         end
 

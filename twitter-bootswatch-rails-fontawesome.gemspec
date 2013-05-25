@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.rubyforge_project = "twitter-bootswatch-rails-fontawesome"
 
-  spec.files = Dir["lib/generators/**/*"] + Dir["lib/twitter/**/*"] + Dir["vendor/**/*"]
+  spec.files = Dir["lib/generators/**/*"] + Dir["lib/twitter/**/*"] + Dir["vendor/**/*"] + ["lib/twitter-bootswatch-rails-fontawesome.rb"]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
