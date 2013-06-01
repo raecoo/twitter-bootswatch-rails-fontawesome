@@ -116,3 +116,5 @@ Then in the [theme_name] css file just do the following:
   - v3.1.1.3
     * Initial release
     * Updated to use Font Awesome v3.1.1
+  - v3.1.1.4
+    * Rails 4 bug fix for generator error
