@@ -10,10 +10,10 @@ task :bundle do
   ## begin font-awesome config ##
 
   sh 'rm -f vendor/assets/fonts/fontawesome/*.*'
-  sh 'cp -f font-awesome/build/assets/font-awesome/font/*.* vendor/assets/fonts/fontawesome'
+  sh 'cp -f font-awesome/font/*.* vendor/assets/fonts/fontawesome'
 
   sh 'rm -f vendor/toolkit/fontawesome/*.less'
-  sh 'cp -f font-awesome/build/assets/font-awesome/less/*.less vendor/toolkit/fontawesome'
+  sh 'cp -f font-awesome/less/*.less vendor/toolkit/fontawesome'
 
   sh 'thor setup:fontawesome_update_less_files_for_asset_pipeline'
 

@@ -1,22 +1,16 @@
 # Twitter Bootswatch Rails Font Awesome gem
 
   - Use to extend your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) project with Font Awesome
-  - Integrates Font Awesome less into the Rails 3.1+ Asset Pipeline
+  - Integrates [Font Awesome](http://fortawesome.github.io/Font-Awesome) less into the Rails 3.1+ Asset Pipeline
   - Easily override Font Awesome variables per bootswatch theme
 
 ## Installation
 
 ```ruby
-group :assets do
-  # rails default gems
-  ...
 
-  # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails'
-  gem 'twitter-bootswatch-rails-fontawesome'
-end
+gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails-fontawesome'
 
-# View Helpers Gem can go outside the assets group
 gem 'twitter-bootswatch-rails-helpers'
 ```
 
@@ -118,3 +112,5 @@ Then in the [theme_name] css file just do the following:
     * Updated to use Font Awesome v3.1.1
   - v3.1.1.4
     * Rails 4 bug fix for generator error
+  - v3.2.1.0
+    * Updated to use Font Awesome v3.2.1
