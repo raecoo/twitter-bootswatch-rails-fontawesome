@@ -75,6 +75,7 @@ If you had an existing admin bootswatch theme here's the contents of admin/font-
 
 
 ```less
+@import "fontawesome/variables";
 // Bootstrap
 // Bootswatch Font Awesome
 
@@ -85,6 +86,7 @@ If you had an existing admin bootswatch theme here's the contents of admin/font-
 @iconMuted:          #eee;
 @iconLight:          #fff;
 @iconDark:           #333;
+@icons-li-width:     30/14em;
 
 // Imports
 // --------------------------
