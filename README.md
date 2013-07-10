@@ -1,5 +1,7 @@
 # Twitter Bootswatch Rails Font Awesome gem
 
+[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
+
   - Use to extend your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) project with Font Awesome
   - Integrates [Font Awesome](http://fortawesome.github.io/Font-Awesome) less into the Rails 3.1+ Asset Pipeline
   - Easily override Font Awesome variables per bootswatch theme
