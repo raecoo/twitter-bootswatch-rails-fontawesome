@@ -35,6 +35,7 @@ In application.css or [theme_name] css file just do the following:
 /*
  *= require_self
  *= require [theme_name]/loader
+ *= require [theme_name]/bootswatch
  *= require fontawesome
 */
 ```
@@ -45,6 +46,7 @@ If you need the ie7 fix:
 /*
  *= require_self
  *= require [theme_name]/loader
+ *= require [theme_name]/bootswatch
  *= require fontawesome
  *= require fontawesome/font-awesome-ie7
 */
@@ -73,7 +75,7 @@ If you had an existing admin bootswatch theme here's the contents of admin/font-
 
 
 ```less
-// Bootstrap 3.1.1
+// Bootstrap
 // Bootswatch Font Awesome
 
 // Variables
@@ -114,3 +116,5 @@ Then in the [theme_name] css file just do the following:
     * Rails 4 bug fix for generator error
   - v3.2.1.0
     * Updated to use Font Awesome v3.2.1
+  - v3.2.1.1
+    * made only subset of less variables available to customize as default

@@ -17,7 +17,8 @@ task :bundle do
 
   sh 'thor setup:fontawesome_update_less_files_for_asset_pipeline'
 
-  sh 'cp -f vendor/toolkit/fontawesome/variables.less lib/generators/bootswatch/fontawesome/install/templates/variables.less'
+  sh 'thor setup:fontawesome_create_custom_variables_less_file'
+
   sh 'cp -f vendor/toolkit/fontawesome/font-awesome.less lib/generators/bootswatch/fontawesome/install/templates/font-awesome.less'
 
   ## end font-awesome config ##

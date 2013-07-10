@@ -40,4 +40,20 @@ class Setup < Thor
 
   end
 
+  desc 'fontawesome_create_custom_variables_less_file', 'create a subset less variables for custom font awesome variables less file to use asset pipeline'
+  def fontawesome_create_custom_variables_less_file
+
+    less_variables = IO.readlines('vendor/toolkit/fontawesome/variables.less')
+
+    # only vars available
+    less_variables_subset = less_variables.slice!(5,6)
+
+    File.open('lib/generators/bootswatch/fontawesome/install/templates/variables.less', 'w') do |less_file|
+      less_variables_subset.each do |line|
+        less_file << line
+      end
+    end
+
+  end
+
 end

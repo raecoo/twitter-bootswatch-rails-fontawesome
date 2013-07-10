@@ -6,6 +6,7 @@ require 'twitter/bootswatch/rails/fontawesome/version'
 Gem::Specification.new do |spec|
   spec.name          = "twitter-bootswatch-rails-fontawesome"
   spec.version       = Twitter::Bootswatch::Rails::Fontawesome::VERSION
+  spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Scott V. Rosenthal"]
   spec.email         = ["sr7575@gmail.com"]
   spec.description   = %q{twitter-bootswatch-rails-fontawesome is a gem extension for twitter-bootswatch-rails gem that adds Font Awesome toolkit for Rails 3.1+ Asset Pipeline with less-rails}

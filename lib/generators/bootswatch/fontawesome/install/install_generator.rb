@@ -6,6 +6,7 @@ module Bootswatch
     module Generators
       class InstallGenerator < ::Rails::Generators::NamedBase
 
+        DEFAULT_RAILS_APP_CSS_FILE='app/assets/stylesheets/application.css'
         DEFAULT_THEME_NAME='bootswatch'
 
         argument :name, type: :string, default: DEFAULT_THEME_NAME,
@@ -30,10 +31,10 @@ module Bootswatch
 
           if use_default_theme_name?
 
-            if File.exist?('app/assets/stylesheets/application.css')
+            if File.exist?(DEFAULT_RAILS_APP_CSS_FILE)
 
-              unless File.read('app/assets/stylesheets/application.css').include?('font-awesome')
-                insert_into_file 'app/assets/stylesheets/application.css',
+              unless File.read(DEFAULT_RAILS_APP_CSS_FILE).include?('font-awesome')
+                insert_into_file DEFAULT_RAILS_APP_CSS_FILE,
                                " *= require #{theme_name}/font-awesome\n",
                                :after => "*= require #{theme_name}/loader\n"
               end
@@ -61,13 +62,6 @@ module Bootswatch
           empty_directory stylesheets_dest_path
 
           less_variables = File.readlines(find_in_source_paths('variables.less'))
-
-          # clean up line breaks
-          less_variables.delete_at(0)
-          less_variables.delete_at(0)
-          less_variables.delete_at(0)
-          less_variables.delete_at(0)
-          less_variables.delete_at(0)
 
           less_imports = File.read(find_in_source_paths('font-awesome.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
