@@ -36,7 +36,7 @@ module Bootswatch
               unless File.read(DEFAULT_RAILS_APP_CSS_FILE).include?('font-awesome')
                 insert_into_file DEFAULT_RAILS_APP_CSS_FILE,
                                " *= require #{theme_name}/font-awesome\n",
-                               :after => "*= require #{theme_name}/loader\n"
+                               :before => "*/"
               end
 
             end
@@ -48,7 +48,7 @@ module Bootswatch
               unless File.read("app/assets/stylesheets/#{theme_name}.css").include?('font-awesome')
                 insert_into_file "app/assets/stylesheets/#{theme_name}.css",
                                " *= require #{theme_name}/font-awesome\n",
-                               :after => "*= require #{theme_name}/loader\n"
+                               :before => "*/"
               end
 
             end

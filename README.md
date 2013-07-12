@@ -107,6 +107,7 @@ Then in the [theme_name] css file just do the following:
 /*
  *= require_self
  *= require [theme_name]/loader
+ *= require [theme_name]/bootswatch
  *= require [theme_name]/font-awesome
 */
 ```
@@ -122,3 +123,5 @@ Then in the [theme_name] css file just do the following:
     * Updated to use Font Awesome v3.2.1
   - v3.2.1.1
     * made only subset of less variables available to customize as default
+  - v3.2.1.2
+    * some refactoring for upgrade
