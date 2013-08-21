@@ -1,8 +1,8 @@
-# Twitter Bootswatch Rails Font Awesome gem
+# Twitter Bootswatch Rails 2.3.2 Font Awesome gem
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
 
-  - Use to extend your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) project with Font Awesome
+  - Use to extend your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails/tree/2.3.2) project with Font Awesome
   - Integrates [Font Awesome](http://fortawesome.github.io/Font-Awesome) less into the Rails 3.1+ Asset Pipeline
   - Easily override Font Awesome variables per bootswatch theme
 
@@ -10,7 +10,7 @@
 
 ```ruby
 
-gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails', '~> 2.3.2'
 gem 'twitter-bootswatch-rails-fontawesome'
 
 gem 'twitter-bootswatch-rails-helpers'
@@ -29,7 +29,7 @@ Run bundle from command line
 
 ## Usage defaults
 
-To add Font Awesome to your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) project:
+To add Font Awesome to your [Twitter Bootswatch Rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails/tree/2.3.2) project:
 
 In application.css or [theme_name] css file just do the following:
 
@@ -125,3 +125,5 @@ Then in the [theme_name] css file just do the following:
     * made only subset of less variables available to customize as default
   - v3.2.1.2
     * some refactoring for upgrade
+  - v3.2.1.3
+    * gem spec dependency locked at tbr gem v2.3.2
