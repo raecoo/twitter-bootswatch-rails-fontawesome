@@ -1,4 +1,4 @@
-# Bootswatch Rails 3.3.2 Font Awesome gem
+## Bootswatch Rails 3.3.2 Font Awesome gem
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
 
