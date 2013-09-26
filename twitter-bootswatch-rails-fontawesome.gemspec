@@ -7,7 +7,6 @@ Gem::Specification.new do |spec|
   spec.name          = "twitter-bootswatch-rails-fontawesome"
   spec.version       = Twitter::Bootswatch::Rails::Fontawesome::VERSION
   spec.platform      = Gem::Platform::RUBY
-  spec.required_ruby_version = '>= 1.9.3'
   spec.required_rubygems_version = '>= 1.8.11'
   spec.authors       = ["Scott V. Rosenthal"]
   spec.email         = ["sr7575@gmail.com"]
